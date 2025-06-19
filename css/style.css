@@ -1,0 +1,103 @@
+/* ================
+   Base Styles
+================ */
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* ===============
+   Typography
+=============== */
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* === Headings === */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(0.75rem, 3.273vw, 1.25rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 7.729vw, 2.5rem);
+  line-height: 1.082;
+}
+
+time {
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 2.899vw, 1rem);
+}
+
+/* ======================
+   Layout Containers
+====================== */
+
+header,
+.hero,
+.posts,
+footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5625em 1.25em;
+}
+
+/* === Header Layout === */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* === Hero Layout === */
+.hero {
+  min-height: 36vh;
+  background: url(/images/hero.webp);
+  background-size: cover;
+
+  color: #fff;
+  display: flex;
+  align-items: end;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+/* ===============
+   Components
+=============== */
+
+/* === Logo === */
+.logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.3125em;
+}
+
+.logo svg {
+  width: clamp(1.447em, 5.595vw, 2.14em);
+}
+
+/* === Navigational Menu === */
+
+/* === Hamburger Toggle === */
+.menu-toggle {
+  background: none;
+  border: none;
+}
+
+/* ===============
+   Media Queries
+=============== */
+
+@media screen and (min-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    background: url(/images/desktop-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
