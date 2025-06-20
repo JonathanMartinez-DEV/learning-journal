@@ -30,7 +30,7 @@ a {
   font-weight: 600;
   color: #090909;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: clamp(0.75em, 1.475vw, 1em);
 }
 
 ul {
