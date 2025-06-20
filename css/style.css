@@ -33,8 +33,39 @@ a {
   font-size: clamp(0.75em, 1.475vw, 1em);
 }
 
+a:hover {
+  color: #505050;
+}
+
 ul {
   list-style-type: none;
+}
+
+.hero-link:hover,
+.post-card:hover {
+  .hero-title,
+  .hero-summary,
+  .hero-date,
+  .post-date,
+  .post-title,
+  .post-summary {
+    color: #505050;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .post-img {
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
 }
 
 /* ======================
@@ -65,13 +96,13 @@ header {
   background: url(/images/hero.webp);
   background-size: cover;
   background-position: center;
-  color: #fff;
   display: flex;
   align-items: end;
 }
 
-.hero-content {
+.hero-content a {
   max-width: 700px;
+  color: #fff;
 }
 
 /* === Posts Layout === */
