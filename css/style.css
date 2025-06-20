@@ -10,10 +10,6 @@ body {
    Typography
 =============== */
 
-body {
-  font-family: "Source Sans 3", sans-serif;
-}
-
 /* === Headings === */
 h1 {
   font-family: "Roboto", sans-serif;
@@ -54,7 +50,7 @@ header {
   min-height: 36vh;
   background: url(/images/hero.webp);
   background-size: cover;
-
+  background-position: center;
   color: #fff;
   display: flex;
   align-items: end;
@@ -62,6 +58,25 @@ header {
 
 .hero-content {
   max-width: 700px;
+}
+
+/* === Posts Layout === */
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+/* === Footer Layout === */
+footer {
+  text-align: center;
 }
 
 /* ===============
@@ -88,16 +103,37 @@ header {
   border: none;
 }
 
+/* === Post Card === */
+.post-card {
+  flex: 1 0 100%;
+}
+
+.post-card img {
+  width: 100%;
+}
+
 /* ===============
    Media Queries
 =============== */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 430px) {
   .hero {
     min-height: 60vh;
     background: url(/images/desktop-hero.webp);
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 481px) {
+  .post-card {
+    flex: 1 0 208px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .posts {
+    padding: 1.5625em 0em;
   }
 }
