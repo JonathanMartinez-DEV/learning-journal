@@ -44,6 +44,8 @@ ul {
 header,
 .hero,
 .posts,
+article,
+.recent-posts,
 footer {
   max-width: 1024px;
   margin: 0 auto;
@@ -87,10 +89,62 @@ header {
   gap: 2.5625em;
 }
 
+/* === Recent Posts Layout === */
+.recent-title {
+  text-align: center;
+  margin-bottom: 0.8235em;
+  font-size: 1.5em;
+}
+
 /* === Footer Layout === */
 footer {
+  min-width: 100%;
   text-align: center;
   background: #202020;
+}
+
+/* =================
+   Article Page
+================= */
+
+/* === Article Layout === */
+.article-title {
+  margin: 0.5em 0;
+}
+
+.article-img {
+  margin: 2.25em 0;
+  border-radius: 3px;
+  max-width: 988px;
+  max-height: 488px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.article-subheading,
+.article-paragraph {
+  margin-bottom: 1em;
+}
+
+/* ==================
+   About Me Page
+================== */
+
+/* === Article Layout === */
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 182px;
+  border-radius: 50%;
+  margin-bottom: 1.625em;
+}
+
+.article-intro {
+  margin-bottom: 0.5em;
 }
 
 /* ===============
@@ -143,7 +197,7 @@ footer {
   flex: 1 0 100%;
 }
 
-.post-card img {
+.post-img {
   width: 100%;
   border-radius: 3px;
   margin-bottom: 0.875em;
@@ -236,5 +290,14 @@ footer {
 @media (min-width: 1025px) {
   .posts {
     padding: 1.5625em 0em;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro-container {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2.0625em;
+    margin-bottom: 4.125em;
   }
 }
